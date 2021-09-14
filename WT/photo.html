@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: chartreuse;
+            font-family: cursive;
+        }
+       .container{
+            text-align: center;
+            border: 10px solid black;
+            border-radius: 5px;
+        }
+        .text{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: xx-large;
+            font-style: normal;
+            color: black                                                ;
+        }
+        button{
+            background-color: beige;
+            border-radius: 12px;
+            font-size: 24px;
+        }
+        body{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1> What does your name say about your personality</h1>
+    <div class="container">
+        <div class="text">
+            <label>Enter your Name</label>
+            <input type="text" name="" id="nameid" color="yellow">
+        </div>
+        <div class="imgdiv">
+            <img src="Soul.JPEG" alt="" class="imgchange">
+        </div>
+        <button> submit </button>
+
+    </div>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const name = $('#nameid').val();
+                alert(name);
+                $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+                const b = $('.imgchange');
+                console.log(b);
+               
+            })
+
+        })
+    </script>
+</body>
+</html>
